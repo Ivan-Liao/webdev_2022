@@ -1,0 +1,67 @@
+{
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.tabSize": 2
+    },
+    "emmet.excludeLanguages": ["markdown"],
+    "emmet.extensionsPath": [""],
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "editor.wordWrap": "wordWrapColumn",
+    "files.autoSave": "afterDelay",
+    "html.format.wrapAttributes": "force-aligned",
+    "gogocrow.beautify.jsbeautifyrc": "/Users/Festi/.jsbeautifyrc",
+    "vim.useCtrlKeys": false,
+    "files.autoSaveDelay": 500,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "html.format.wrapAttributesIndentSize": 2,
+    "editor.defaultFormatter": "ms-python.python",
+    "[html]": {
+      "editor.tabSize": 2,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.tabSize": 2
+    },
+    "[python]": {
+      "editor.tabSize": 4,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "ms-python.python",
+      "editor.formatOnPaste": false
+    },
+    "[sql]": {
+      "editor.fontLigatures": null,
+      "editor.detectIndentation": false,
+      "editor.defaultFormatter": "adpyke.vscode-sql-formatter",
+      "sql-formatter.uppercase": true,
+      "sql-formatter.linesBetweenQueries": 4,
+      "editor.wordWrapColumn": 120
+    },
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter-notebook"
+    },
+    "python.pythonPath": "/bin/python3.9",
+    "python.defaultInterpreterPath": "/bin/python3.9",
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+    },
+    "python.formatting.provider": "black",
+    "security.workspace.trust.untrustedFiles": "open",
+    "jupyter.askForKernelRestart": false,
+    "[json]": {
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "editor.suggest.insertMode": "replace"
+    },
+    "editor.fontLigatures": null,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vim.textwidth": 200,
+    "editor.wordWrapColumn": 200
+  }
+  
