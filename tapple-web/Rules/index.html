@@ -1,0 +1,389 @@
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+
+        <title>Tapple Network | Rules</title>
+        <meta name="theme-color" content="#ffc03d">
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+
+    <body>
+
+    <!-- mobile menu -->
+
+    <div id="JCMenu" class="JC-MobileBody">
+        <a href="javascript:void(0)" class="JCMobClose" onclick="JCMobClose()">&times;</a>
+        <div class="JC-MobileBody-content">
+            <a href="#" class="JC-navMob">Home</a>
+            <a href="#" class="JC-navMob">Forums</a>
+            <a href="#" class="JC-navMob">Vote</a>
+            <a href="#" class="JC-navMob">Store</a>
+            <a href="#" class="JC-navMob">Rules</a>
+            <a href="#" class="JC-navMob">Support</a>
+            <a href="#" class="JC-navMob">Vote</a>
+            <a href="#" class="JC-navMob">Player Stats</a>
+            <a href="#" class="JC-navMob">Support</a>
+        </div>
+    </div>
+
+    <!-- mobile menu -->
+
+        <!-- JC HEADER -->
+
+        <div class="JCHeader">
+
+            <div class="JC-NavBar">
+				
+                <a href="#" class="JC-navLink">Home</a>
+                <a href="#" class="JC-navLink">Games</a>
+                <a href="#" class="JC-navLink">Forums</a>
+                <a href="#" class="JC-navStore">Store</a>
+                <a href="#" class="JC-navMenu" onclick="JCMobOpen()"><i class="fas fa-bars"></i></a>
+                <a href="#" class="JC-navLink">Stats</a>
+                <a href="#" class="JC-navLink">Support</a>
+                <a href="#" class="JC-navLink JCDropBtn" onclick="dropdownOpen()">Other <i class="fas fa-sort-down turned" id="JCDownTurn"></i></a>
+
+				
+				
+                <div class="JC-DropDown">
+                    <div id="JCDownID" class="JC-DropDown-content">
+                        <a href="#" class="JC-navMob">Rules</a>
+                        <a href="#" class="JC-navMob">Vote</a>
+                    </div>
+                  </div>
+
+            </div>
+
+            <div class="JC-Branding">
+                <a href="/"><img src="https://cdn.discordapp.com/attachments/813339670833266708/813368381276160060/Tapple_Full_12k.png" class="JCLogo"></a>
+            
+				<div class="JC-BrandLeft">
+               		
+                      <p class="JC-BrandSmall"><span data-playercounter-ip="TAPPLE.WORLD">0</span> Players Online</p>
+					
+						<a href="#" class="hoverNone"><div class="JC-BrandBtn">
+							<p>Play Now</p>	
+						</div></a>
+					
+						<div class="JC-BrandCol copyBtn" data-clipboard-text="tapple.world" onClick="copied()" style="cursor:pointer;display: flex;text-align: center;justify-content: center;align-items: center;">
+                            <p class="JC-BrandBig">IP: TAPPLE.WORLD</p>
+							
+							<p class="JC-BrandSmall-open" id="changeText">CLICK TO COPY</p>
+                        </div>
+                    </div>
+			</div>
+
+        </div>
+
+        <!-- JC HEADER -->
+
+
+        <!-- JC CONTAINER -->
+
+        <div class="JC-Container">
+
+            <div class="JC-body-header">
+
+                <p class="JC-bodyTitle">Rules</p>
+
+            </div>
+
+            <div class="JC-bodyContainer">
+                
+                <div class="JC-RulesContainer">
+
+                    <div class="JC-RulesTop">
+                        <p class="JC-RulesTop-p">These are the rules and punishments that are implemented on Tapple, with thorough explanation of each rule. The rules are enforced by the staff members, and they follow the guidelines to carry out the punishments.
+
+                            <br></br>Playing on the server means that you agree to follow the rules so that we can protect your experience from illegitimate cheaters and allow your gameplay to be undisturbed.
+                            
+                            <br></br>Punishment times are determined by the severity of the offense and previous offenses that a player has.
+                            (Severity 1: least severe, Severity 4: most severe)
+                            
+                            <br></br>If you believe someone is breaking the rules, you can report it here.
+                        </p>
+                    
+                        <div class="JC-RulesRows">
+                                <a href="#chatRules" class="JC-RulesDirect">Chat Rules</a>
+                                <a href="#gameplayRules" class="JC-RulesDirect">GamePlay Rules</a>
+                        </div>
+                    </div>
+
+                    <div class="JC-RulesBottom-collapse" id="chatRules">
+
+                        <div class="JC-RulesBottom-titleBox">
+                            <p class="JC-RulesBottom-title">Chat Rules</p>
+                            <hr class="JC-Hr"></hr>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Spamming/Character Spam</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Spamming/Character Spam</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Spamming/Character Spam</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Spamming/Character Spam</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="JC-RulesBottom-collapse" id="gameplayRules">
+
+                        <div class="JC-RulesBottom-titleBox">
+                            <p class="JC-RulesBottom-title">Gameplay Rules</p>
+                            <hr class="JC-Hr"></hr>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Advertising</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Advertising</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+                        <button type="button" class="accordion">
+                            <div>Advertising</div>
+
+                            <div class="plusRotate">+</div>
+                        </button>
+                        <div class="content">
+                            <p>Constantly repeating similar messages or sending messages containing repeated characters.</p>
+                            <p class="typeAccordion">Severity 1</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+
+        </div>
+
+        <!-- JC CONTAINER -->
+
+        <!-- JC FOOTER -->
+
+        <div class="JC-FooterContainer">
+
+            <div class="JC-FooterBody">
+
+                <div class="JC-FooterBox">
+
+                    <p class="JC-FooterTitle">About US</p>
+
+                    <div class="JC-FooterAligned">
+
+                        <p class="JC-FooterDesc">Tapple is  Minecraft server that currently features many unique games. We believe that maintaining an experimental environment can push boundaries and reach the most enjoyable yet compettitve Minecraft experience.</p>
+
+                        <div class="JC-FooterRows">
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fab fa-discord"></i>
+                            </a>
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fas fa-rss"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="JC-FooterBox">
+
+                    <p class="JC-FooterTitle">Quick Links</p>
+
+                    <div class="JC-FooterAligned">
+
+                        <a href="#" class="JC-FooterLink">Home</a>
+                        <a href="#" class="JC-FooterLink">Forums</a>
+                        <a href="#" class="JC-FooterLink">Store</a>
+                        <a href="#" class="JC-FooterLink">Support</a>
+
+                    </div>
+
+                </div>
+
+                <div class="JC-FooterBox">
+
+                    <p class="JC-FooterTitle">Tapple Store</p>
+
+                    <div class="JC-FooterAligned">
+
+                        <p class="JC-FooterDesc">The people at Tapple work every day to bring you the highest quality Minecraft server experience possible. Purchasing ranks, events, and other products will help continue funding our services and make the server even better!</p>
+                    
+                        <a href="#" class="JC-FooterStore">Visit Our Store</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="JC-FooterBottom">
+
+            <div class="JC-FooterSpace">
+
+                <div class="JC-FooterSpace-left">
+                    <p>2021 &copy; Tapple. All Rights Reserved.</p>
+                </div>
+
+                <div class="JC-FooterSpace-right">
+                    <a href="#">Business Inquries</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- JC FOOTER-->
+
+        <!-- script -->
+
+        <script>
+            function JCMobOpen() {
+              document.getElementById("JCMenu").style.width = "300px";
+            }
+            
+            function JCMobClose() {
+              document.getElementById("JCMenu").style.width = "0%";
+            }
+        </script>
+
+        <script>
+            function dropdownOpen() {
+              document.getElementById("JCDownID").classList.toggle("show");
+              document.getElementById("JCDownTurn").classList.toggle("turned");
+            }
+            
+            window.onclick = function(event) {
+              if (!event.target.matches('.JCDropBtn')) {
+                var dropdowns = document.getElementsByClassName("JC-DropDown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+
+<script>
+    var coll = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+        <script>
+            new ClipboardJS('.copyBtn');
+        </script>
+
+        <script>
+            function copied() {
+                var x = document.getElementById("changeText");
+                if (x.innerHTML === "Click To Copy") {
+                    x.innerHTML = "Copied";
+                    setTimeout(function(){revertBack()}, 3000);
+                } else {
+                    x.innerHTML = "Click To Copy";
+                }
+            }
+        </script>
+
+        <script>
+            function revertBack() {
+                var x = document.getElementById("changeText");
+                if (x.innerHTML === "Copied") {
+                    x.innerHTML = "Click To Copy";
+                } else {
+                    x.innerHTML = "Click To Copy";
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

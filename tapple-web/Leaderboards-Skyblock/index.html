@@ -1,0 +1,573 @@
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+
+        <title>Tapple Network | Skyblock</title>
+        <meta name="theme-color" content="#ffc03d">
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+
+    <body>
+
+    <!-- mobile menu -->
+
+    <div id="JCMenu" class="JC-MobileBody">
+        <a href="javascript:void(0)" class="JCMobClose" onclick="JCMobClose()">&times;</a>
+        <div class="JC-MobileBody-content">
+            <a href="#" class="JC-navMob">Home</a>
+            <a href="#" class="JC-navMob">Forums</a>
+            <a href="#" class="JC-navMob">Vote</a>
+            <a href="#" class="JC-navMob">Store</a>
+            <a href="#" class="JC-navMob">Rules</a>
+            <a href="#" class="JC-navMob">Support</a>
+            <a href="#" class="JC-navMob">Vote</a>
+            <a href="#" class="JC-navMob">Player Stats</a>
+            <a href="#" class="JC-navMob">Support</a>
+        </div>
+    </div>
+
+    <!-- mobile menu -->
+
+        <!-- JC HEADER -->
+
+        <div class="JCHeader">
+
+            <div class="JC-NavBar">
+				
+                <a href="#" class="JC-navLink">Home</a>
+                <a href="#" class="JC-navLink">Games</a>
+                <a href="#" class="JC-navLink">Forums</a>
+                <a href="#" class="JC-navStore">Store</a>
+                <a href="#" class="JC-navMenu" onclick="JCMobOpen()"><i class="fas fa-bars"></i></a>
+                <a href="#" class="JC-navLink">Stats</a>
+                <a href="#" class="JC-navLink">Support</a>
+                <a href="#" class="JC-navLink JCDropBtn" onclick="dropdownOpen()">Other <i class="fas fa-sort-down turned" id="JCDownTurn"></i></a>
+
+				
+				
+                <div class="JC-DropDown">
+                    <div id="JCDownID" class="JC-DropDown-content">
+                        <a href="#" class="JC-navMob">Rules</a>
+                        <a href="#" class="JC-navMob">Vote</a>
+                    </div>
+                  </div>
+
+            </div>
+
+            <div class="JC-Branding">
+                <a href="/"><img src="https://cdn.discordapp.com/attachments/813339670833266708/813368381276160060/Tapple_Full_12k.png" class="JCLogo"></a>
+            
+				<div class="JC-BrandLeft">
+               		
+                      <p class="JC-BrandSmall"><span data-playercounter-ip="TAPPLE.WORLD">0</span> Players Online</p>
+					
+						<a href="#" class="hoverNone"><div class="JC-BrandBtn">
+							<p>Play Now</p>	
+						</div></a>
+					
+						<div class="JC-BrandCol copyBtn" data-clipboard-text="tapple.world" onClick="copied()" style="cursor:pointer;display: flex;text-align: center;justify-content: center;align-items: center;">
+                            <p class="JC-BrandBig">IP: TAPPLE.WORLD</p>
+							
+							<p class="JC-BrandSmall-open" id="changeText">CLICK TO COPY</p>
+                        </div>
+                    </div>
+			</div>
+
+        </div>
+
+        <!-- JC HEADER -->
+
+
+        <!-- JC CONTAINER -->
+
+        <div class="JC-Container">
+
+            <div class="JC-body-header">
+
+                <a href="#" class="JC-StatsAnchor">Players</a>
+                <a href="#" class="JC-StatsAnchor JC-Active">Leaderboards</a>
+
+            </div>
+
+            <div class="JC-LeaderBoard-gameHeader">
+
+                <div class="JC-Leaderboard-spaceBetween">
+
+                    <div class="JC-Leaderboard-left">
+                        <a href="#" class="JC-GameBack"><i class="fas fa-chevron-left"></i> Back</a>
+                    </div>
+
+                    <div class="JC-Leaderboard-cen">
+                        <p class="JC-GameName">Skyblock</p>
+                    </div>
+
+                    <div class="JC-Leaderboard-right">
+                    </div>
+
+                </div>
+
+                <div class="JC-Leaderboard-stats-selector">
+
+                    <a href="#" class="JC-Stats-Selector JC-SelectorActive">
+                        <div>All-Time Leaderboards</div>
+                    </a>
+
+                    <a href="#" class="JC-Stats-Selector">
+                        <div>Solos</div>
+                    </a>
+                    
+                    <a href="#" class="JC-Stats-Selector">
+                        <div>Duos</div>
+                    </a>
+
+                    <a href="#" class="JC-Stats-Selector">
+                        <div>Squads</div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="JC-GameLeaderboard-content">
+
+                <div class="JC-GameLeaderboard-table">
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">1st</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">2nd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">3rd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">4th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">5th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">1st</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">2nd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">3rd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">4th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">5th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">1st</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">2nd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">3rd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">4th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">5th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">1st</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">2nd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">3rd</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">4th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="JC-GameLeaderboard-spaceBetween">
+
+                        <div class="JC-GameLeaderboard-leftInfo">
+                            <p class="JC-LeaderboardRank">5th</p>
+                            <p class="JC-LeaderboardName"><img src="https://crafatar.com/avatars/9c12e53ca3614d9aba23e5da8e880caa" class="JC-Leaderboard-img"> Erferno</p>
+                        </div>
+
+                        <div class="JC-GameLeaderboard-rightInfo">
+                            <p class="JC-Leaderboard-value">7000 Hours</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="JC-GameLeaderboard-pagination">
+
+                    <a href="#" class="JC-PaginationBtn">Prev</a>
+                    <a href="#" class="JC-PaginationBtn JC-PageActive-btn">1</a>
+                    <a href="#" class="JC-PaginationBtn">2</a>
+                    <a href="#" class="JC-PaginationBtn">3</a>
+                    <a href="#" class="JC-PaginationBtn">Next</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- JC CONTAINER -->
+
+        <!-- JC FOOTER -->
+
+        <div class="JC-FooterContainer">
+
+            <div class="JC-FooterBody">
+
+                <div class="JC-FooterBox">
+
+                    <p class="JC-FooterTitle">About US</p>
+
+                    <div class="JC-FooterAligned">
+
+                        <p class="JC-FooterDesc">Tapple is  Minecraft server that currently features many unique games. We believe that maintaining an experimental environment can push boundaries and reach the most enjoyable yet compettitve Minecraft experience.</p>
+
+                        <div class="JC-FooterRows">
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fab fa-discord"></i>
+                            </a>
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="#" class="JC-FooterSocial">
+                                <i class="fas fa-rss"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="JC-FooterBox">
+
+                    <p class="JC-FooterTitle">Quick Links</p>
+
+                    <div class="JC-FooterAligned">
+
+                        <a href="#" class="JC-FooterLink">Home</a>
+                        <a href="#" class="JC-FooterLink">Forums</a>
+                        <a href="#" class="JC-FooterLink">Store</a>
+                        <a href="#" class="JC-FooterLink">Support</a>
+
+                    </div>
+
+                </div>
+
+                <div class="JC-FooterBox">
+
+                    <p class="JC-FooterTitle">Tapple Store</p>
+
+                    <div class="JC-FooterAligned">
+
+                        <p class="JC-FooterDesc">The people at Tapple work every day to bring you the highest quality Minecraft server experience possible. Purchasing ranks, events, and other products will help continue funding our services and make the server even better!</p>
+                    
+                        <a href="#" class="JC-FooterStore">Visit Our Store</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="JC-FooterBottom">
+
+            <div class="JC-FooterSpace">
+
+                <div class="JC-FooterSpace-left">
+                    <p>2021 &copy; Tapple. All Rights Reserved.</p>
+                </div>
+
+                <div class="JC-FooterSpace-right">
+                    <a href="#">Business Inquries</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- JC FOOTER-->
+
+        <!-- script -->
+
+        <script>
+            function JCMobOpen() {
+              document.getElementById("JCMenu").style.width = "300px";
+            }
+            
+            function JCMobClose() {
+              document.getElementById("JCMenu").style.width = "0%";
+            }
+        </script>
+
+        <script>
+            function dropdownOpen() {
+              document.getElementById("JCDownID").classList.toggle("show");
+              document.getElementById("JCDownTurn").classList.toggle("turned");
+            }
+            
+            window.onclick = function(event) {
+              if (!event.target.matches('.JCDropBtn')) {
+                var dropdowns = document.getElementsByClassName("JC-DropDown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+
+        <script>
+            new ClipboardJS('.copyBtn');
+        </script>
+
+        <script>
+            function copied() {
+                var x = document.getElementById("changeText");
+                if (x.innerHTML === "Click To Copy") {
+                    x.innerHTML = "Copied";
+                    setTimeout(function(){revertBack()}, 3000);
+                } else {
+                    x.innerHTML = "Click To Copy";
+                }
+            }
+        </script>
+
+        <script>
+            function revertBack() {
+                var x = document.getElementById("changeText");
+                if (x.innerHTML === "Copied") {
+                    x.innerHTML = "Click To Copy";
+                } else {
+                    x.innerHTML = "Click To Copy";
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

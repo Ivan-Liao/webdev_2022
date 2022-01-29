@@ -1,0 +1,1589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: #1d1d1d;
+    color: #fff;
+    margin: 0px;
+}
+
+:root {
+    --body: #e2f4ff;
+    --primary: #cc5757;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.JCHeader {
+    background: url(https://i.imgur.com/yzhWS32.png);
+    height: 375px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.JC-NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    position: relative;
+    left: -30px;
+}
+
+.JC-navLink {
+    color: #fff;
+    margin: 0px 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.JC-navLink:hover {
+    color: #1d1d1d;
+    transition: 0.3s ease;
+	text-decoration: none !important;
+}
+
+.JC-navStore {
+    background: #fff;
+    padding: 10px 45px;
+    color: #c94f64;
+    border-radius: 80px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px 15px;
+    border: 5px solid #fff;
+    transition: 0.3s ease;
+}
+
+.JC-navStore:hover {
+    background: transparent;
+	text-decoration: none !important;
+    color: #fff;
+    border: 5px solid #fff;
+    transition: 0.3s ease;
+}
+
+.JC-Branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    position: relative;
+	width: 1100px;
+	margin: 0 auto;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+.JCLogo {
+    width: 400px;
+}
+
+.JC-BrandBar {
+    background: #2b2b2b;
+    width: 1100px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px 30px;
+    height: 80px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+
+.JC-BrandIcon {
+    width: 40px;
+}
+
+.JC-brandPost {
+    position: absolute;
+    left: 50px;
+}
+
+.JC-BrandRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 0;
+    transition: 0.3s ease;
+}
+
+.JC-BrandRight:hover {
+    position: relative;
+    right: 5px;
+	text-decoration: none !important;
+}
+
+.JC-BrandLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    position: relative;
+	text-align: center;
+	flex-direction: column;
+    left: 0px;
+	top: 10px;
+}
+
+.JC-BrandLeft:hover {
+	text-decoration: none !important;
+}
+
+.JC-BrandLeft .JC-BrandIcon {
+    margin-right: 10px;
+}
+
+.JC-BrandRight .JC-BrandIcon {
+    margin-left: 10px;
+}
+
+.JC-BrandSmall {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.6;
+	margin-bottom: 10px;
+	transition: 0.3s ease;
+}
+		
+.JC-BrandSmall-open {
+	display: none;
+	position: absolute;
+	font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.6;
+	margin-bottom: 10px;
+	transition: 0.3s ease;
+	margin-top: 50px;
+}
+		
+.JC-BrandBig:hover + .JC-BrandSmall-open {
+	display: block;
+}
+
+.JC-BrandBig {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+	transition: 0.3s ease;
+}
+
+.JC-brandLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.JC-brandLink2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.JCDropBtn {
+    position: absolute;
+    margin-left: 900px;
+}
+
+.JC-DropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.JCDropBtn i {
+    position: relative;
+    top: 5px;
+    transform: rotate(180deg);
+}
+
+.JCDropBtn:hover > #JCDownTurn {
+    color: #1d1d1d !important;
+    transition: 0.3s ease;
+}
+
+.turned {
+    transform: rotate(00deg) !important;
+    top: -2px !important;
+    transition: 0.3s ease;
+}
+  
+.JC-DropDown-content {
+    display: none;
+    position: absolute;
+    background-color: #2b2b2b;
+    min-width: 200px;
+    left: 25px;
+    border-radius: 6px;
+    top: 15px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.JC-DropDown-content a {
+    color: #fff;
+    padding: 15px;
+    text-decoration: none !important;
+    display: block;
+}
+  
+.JC-DropDown a:hover {
+    background-color: #1d1d1d;
+	text-decoration: none !important;
+}
+  
+.show {
+    display: block;
+}
+
+.JC-navMenu {
+    background: #fff;
+    padding: 15px 50px;
+    color: #c94f64;
+    border-radius: 80px;
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px 15px;
+    transition: 0.3s ease;
+    display: none;
+}
+
+.JC-navMenu:hover {
+    background: orange;
+    color: #fff;
+    transition: 0.3s ease;
+	text-decoration: none !important;
+}
+
+.JC-MobileBody {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(43 43 43);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.JC-MobileBody-content {
+    position: relative;
+    top: 150px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.JCMobClose {
+    position: absolute;
+    float: right;
+    right: 30px;
+    font-size: 44px;
+}
+
+.JC-MobileBody a {
+    display: block;
+    color: #fff;
+    margin: 50px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+}
+  
+.JC-MobileBody a:hover, .JC-MobileBody a:focus {
+    color: #f1f1f1;
+	text-decoration: none !important;
+}
+
+.JC-navMob {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+  
+.JC-MobileBody .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.JC-BrandBtn {
+    background: #262626;
+    width: 200px;
+	box-shadow: 0 6px 0px rgba(0,0,0,0.15) !important;
+    padding: 11px 0px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+	background: #ffbc00;
+	border: 4px solid #ffbc00;
+    transition: 0.3s ease;
+}
+
+.JC-BrandBtn:hover {
+	transition: 0.3s ease;
+	background: inherit;
+}
+
+.p-navgroup-link.is-menuOpen {
+	border-radius: 8px !important;
+}
+
+.hoverNone:hover {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+/* JC FOOTER */
+
+.JC-FooterContainer {
+    background: #212121;
+    padding: 0px 50px;
+	margin-top: 50px;
+}
+
+.JC-FooterBody {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.JC-FooterBox {
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 50px;
+}
+
+.JC-FooterAligned {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.JC-FooterDesc {
+    line-height: 20px;
+    opacity: 0.6;
+    font-size: 15px;
+}
+
+.JC-FooterTitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.JC-FooterLink {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin: 5px 0px;
+    padding: 0px 15px;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.025);
+    transition: 0.3s ease;
+}
+
+.JC-FooterLink:hover {
+    background: #1d1d1d;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.JC-FooterStore {
+    background: #cc5757;
+    padding: 11px;
+    border-radius: 4px;
+    margin-top: 15px;
+	width: 50%;
+    text-transform: uppercase;
+    font-weight: 600;
+	border: 4px solid #cc5757; 
+    letter-spacing: 1px;
+    color: #fff;
+	text-align: center;
+	transition: 0.3s ease;
+}
+
+.JC-FooterStore:hover {
+    text-decoration: none;
+	background: inherit;
+	color: #fff;
+	transition: 0.3s ease;
+}
+
+.JC-FooterRows {
+    position: relative;
+    top: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+.JC-FooterSocial {
+    font-size: 25px;
+    background: rgba(255,255,255,0.025);
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.JC-FooterSocial:hover {
+    background: #1d1d1d;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.JC-FooterBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.JC-FooterSpace {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    padding: 25px 0px;
+}
+
+.JC-FooterSpace-left p {
+    opacity: 0.6;
+    font-weight: 600;
+}
+
+.JC-FooterSpace-right a {
+    margin: 0px 15px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* JC FOOTER */
+
+.JC-UserBar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #212121;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+	border-radius: 6px;
+
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+	margin-bottom: 20px;
+}
+
+.JC-DiscordSidebar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #212121;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+	border-radius: 6px;
+
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+	margin-bottom: 20px;
+}
+
+.JC-brandPost:hover {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+.JC-DiscordSide-logo {
+    width: 45px;
+	margin-right: 15px;
+}
+
+.JC-DiscordSidebar-head {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.JC-DiscordSide-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.JC-DiscordSide-icon {
+    font-size: 30px;
+	position: relative;
+	left: 0px;
+	transition: 0.3s ease;
+}
+
+.JC-DiscordLink:hover {
+	text-decoration: inherit;
+	transition: 0.3s ease;
+}
+
+.JC-DiscordLink:hover .JC-DiscordSide-icon {
+	position: relative;
+	left: -10px;
+	transition: 0.3s ease;
+}
+
+.JC-Container {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: -40px;
+}
+
+.JC-body-header {
+    background: #212121;
+    height: 83px;
+    width: 100%;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    padding: 25px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.JC-StatsAnchor {
+    margin: 0px 15px;
+    font-size: 18px;
+    width: 50%;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 83px;
+    line-height: 83px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.JC-StatsAnchor:hover {
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.JC-Active {
+    opacity: 1;
+    border-bottom: 5px solid #cc5757;
+}
+
+.JC-PlayerSearch {
+    background: #212121;
+    height: 83px;
+    width: 100%;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playerSearch-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: inherit;
+    padding: 0px 15px;
+    background: rgba(255,255,255,0.025);
+    font-family: 'Rubik', sans-serif;
+    outline: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.playerSearch-btn {
+    background: #cc5757;
+    color: #fff;
+    border: inherit;
+    margin-left: 15px;
+    outline: inherit;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 4px;
+    width: 200px;
+    cursor: pointer;;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.playerSearch-btn:hover {
+    background: #c54646;
+    transition: 0.3s ease;
+}
+
+.JC-PlayerImage {
+    width: 160px;
+    margin-right: 25px;
+    z-index: 10;
+}
+
+.JC-PlayerProfile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.JC-PlayerProfile-top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.JC-PlayerProfile-topCol {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.JC-PlayerProfile-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.JC-PlayerName {
+    color: #c54646;
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.JC-PlayerRank {
+    color: gold;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: uppercase;
+    background: #262626;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.JC-PlayerProfile-generalStats {
+    background: #212121;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+}
+
+.JC-PlayerProfile-title {
+    padding: 15px 20px;
+    background: #cc5757;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #dedede;
+}
+
+.JC-PlayerProfile-spaceBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.JC-PlayerProfile-statsTitle {
+    padding: 15px 20px;
+    color: #cc5757;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.JC-PlayerProfile-statsIcon {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.JC-PlayerProfile-statsRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.JC-PlayerProfile-statsBox {
+    width: 345px;
+    margin: 10px;
+    background: #212121;
+    border-radius: 6px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+}
+
+.JC-PlayerProfile-endDiv {
+    padding: 15px 20px;
+    opacity: 1;
+    background: #262626;
+    font-size: 14px;
+    font-style: italic;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.JC-PlayerProfile-end {
+    opacity: 0.6;
+}
+
+.JC-bodyTitle {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+}
+
+.JC-bodyTitle span {
+    font-size: 12px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.JC-LeaderBoard-container {
+    background: #212121;
+    width: 100%;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    border-radius: 6px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.JC-bodyContainer {
+    background: #212121;
+    width: 100%;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    border-radius: 6px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.JC-GameBody-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.JC-GameBody-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.JC-GameBody-left {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.JC-GameBody-img {
+    width: 400px;
+    margin-top: 40px;
+    float: left; 
+}
+
+.JC-GameBody-titleBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-rows {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.GameRow-image {
+    width: 500px;
+    margin: 15px 10px;
+    border-radius: 4px;
+}
+
+.JC-BodyHR {
+    width: 100px;
+    height: 6px;
+    border: inherit;
+    border-radius: 80px;
+    background: #cc5757;
+}
+
+.JC-GameBody-p {
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.7;
+    text-align: justify;
+}
+
+.JC-GameBody-b {
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.7;
+    text-align: justify;
+}
+
+.JC-LeaderboardTitle {
+    font-size: 14px;
+    height: 70px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    align-items: center;
+    color: #ffffff7a;
+    justify-content: center;
+    border-bottom: 4px solid #1d1d1d7d;
+}
+
+.JC-Leaderboard-serverIcon {
+    width: 35px;
+}
+
+.JC-Leaderboard-Box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 65px;
+    text-align: center;
+    background: #262626;
+    border-radius: 6px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+.JC-Leaderboard-Box:hover {
+    transition: 0.3s ease;
+    background: #1b1b1b;
+}
+
+.JC-Leaderboard-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+
+.JC-GameListBox {
+    position: relative;
+    top: 0px;
+    transition: 0.3s ease;
+}
+
+.JC-GameListBox:hover {
+    position: relative;
+    top: -10px;
+    transition: 0.3s ease;
+}
+
+.JC-GameDiv {
+    border-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 30px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    background: #1d1d1d;
+}
+
+.JC-GameButton {
+    background: #cc5757;
+    width: 100%;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 15px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.JC-GameListBox:hover .JC-GameButton {
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.GameImage {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.JC-GameDesc {
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.JC-GameName {
+    font-weight: 700;
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: #cc5757;
+    font-size: 22px;
+}
+
+.JC-Leaderboard-serverName {
+    font-weight: 500;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: #cc5757;
+}
+
+.JC-VotePage-container {
+    padding: 25px;
+}
+
+.JC-VotePage-rows {
+    display: flex;
+}
+
+.VotePage-left {
+    width: 60%;
+}
+
+.VotePage-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+    margin-left: 50px;
+}
+
+.VotePage-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0px;
+    border-radius: 4px;
+    background: #cc5757;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.VotePage-leftTitle {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.VotePage-leftSlogan {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.VotePage-desc {
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.JC-VotePage-leaderboards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+    flex-direction: column;
+}
+
+.JC-VotePage-leadTitle {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.JC-Hr {
+    padding: 3px;
+    background: #cc5757;
+    border: inherit;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 80px;
+    margin-bottom: 20px;
+}
+
+.JC-LeaderBoard-container {
+    background: #212121;
+    width: 100%;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    border-radius: 6px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.JC-LeaderboardTitle {
+    font-size: 14px;
+    height: 70px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    align-items: center;
+    color: #ffffff7a;
+    justify-content: center;
+    border-bottom: 4px solid #1d1d1d7d;
+}
+
+.JC-Leaderboard-serverIcon {
+    width: 35px;
+}
+
+.JC-Leaderboard-Box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 65px;
+    text-align: center;
+    background: #262626;
+    border-radius: 6px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+.JC-Leaderboard-Box:hover {
+    transition: 0.3s ease;
+    background: #1b1b1b;
+}
+
+.JC-Leaderboard-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+
+.JC-Leaderboard-serverName {
+    font-weight: 500;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: #cc5757;
+}
+
+.JC-LeaderBoard-gameHeader {
+    background: #212121;
+    width: 100%;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    border-radius: 6px;
+    padding: 25px 30px 0px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.JC-Leaderboard-spaceBetween {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.JC-GameBack {
+    opacity: 0.3;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.JC-GameBack i {
+    margin-right: 5px;
+}
+
+.JC-GameBack:hover {
+    opacity: 0.5;
+    transition: 0.3s ease;
+}
+
+.JC-GameName {
+    color: #cc5757;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.JC-Leaderboard-stats-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.JC-Stats-Selector {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    opacity: 0.6;
+    height: 50px;
+    margin: 0px 20px;
+}
+
+.JC-Stats-Selector:hover {
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.JC-SelectorActive {
+    color: #cc5757;
+    opacity: 1;
+    border-bottom: 5px solid #cc5757;
+}
+
+.JC-GameLeaderboard-content {
+    display: flex;
+    background: #212121;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    padding: 15px;
+}
+
+.JC-GameLeaderboard-table {
+    width: 800px;
+    border: 2px solid rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+}
+
+.JC-GameLeaderboard-spaceBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px 20px 0px;
+}
+
+.JC-GameLeaderboard-leftInfo {
+    display: flex;
+    align-items: center;
+}
+
+.JC-LeaderboardRank {
+    width: 80px;
+    text-align: center;
+    color: #c4a264;
+    font-weight: 700;
+}
+
+.JC-Leaderboard-img {
+    width: 25px;
+    border-radius: 4px;
+    box-shadow: 0 8px 12px -3px rgba(0,0,0,0.075);
+    margin-right: 15px;
+}
+
+.JC-LeaderboardName {
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.JC-Leaderboard-value {
+    color: #cc5757;
+    font-weight: 500;
+}
+
+.JC-GameLeaderboard-pagination {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.JC-PaginationBtn {
+    background: #262626;
+    padding: 7px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.JC-PageActive-btn {
+    background: #cc5757;
+}
+
+.JC-RulesContainer {
+    padding: 25px;
+}
+
+.JC-RulesTop-p {
+    line-height: 25px;
+    opacity: 0.7;
+}
+
+.JC-RulesBottom-collapse {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.accordion {
+    background-color: #1d1d1d;
+    color: white;
+    cursor: pointer;
+    padding: 15px 25px;
+    margin: 25px 0px 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plusRotate {
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.accordion:hover .plusRotate {
+    transform: rotate(45deg);
+    transition: 0.3s ease;
+}
+
+.typeAccordion {
+    text-align: center;
+    border-top: 2px solid white;
+    margin-top: 15px;
+    line-height: 45px;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.JC-RulesBottom-titleBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.JC-RulesBottom-title {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.plusRotate:hover {
+    transform: rotate(45deg);
+    transition: 0.3s ease;
+}
+
+.content {
+    padding: 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #212121;
+}
+
+.JC-RulesRows {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    background: #1d1d1d;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.JC-RulesDirect {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px 10px;
+    border-radius: 4px;
+    padding: 15px;
+    transition: 0.3s ease;
+}
+
+.JC-RulesDirect:hover {
+    background: #212121;
+    transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 1250px) {
+    .JC-FooterSpace {
+        width: 90%;
+    }
+
+    .JC-Container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .JC-GameLeaderboard-table {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .JC-FooterSpace {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .JC-FooterSpace-right {
+        margin-top: 15px;
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+    }
+
+    .JC-FooterSpace-right a {
+        margin-top: 15px;
+    }
+
+    .JC-VotePage-rows {
+        flex-direction: column;
+    }
+
+    .VotePage-left {
+        width: 100%;
+    }
+
+    .VotePage-right {
+        margin-top: 50px;
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .JC-FooterBox {
+        width: 100%;
+    }
+
+    .JC-FooterContainer {
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+	.JC-navLink {
+        display: none;
+    }
+
+    .JC-navStore {
+        display: none;
+    }
+
+    .JC-navMenu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .JC-BrandBar {
+        width: 90%;
+    }
+	
+	.JC-Branding {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+    .JC-NavBar {
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .JC-brandPost {
+        position: relative;
+        left: 0px;
+    }
+
+    .JC-navMenu {
+        position: relative;
+    }
+
+	.JC-Branding {
+		flex-direction: column;
+	}
+	
+	.JCHeader {
+		height: 420px;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+    .GameRow-image {
+        width: 100%;
+    }
+
+    .JC-GameBody-img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .JC-BrandRight {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .JCLogo {
+        width: 100%;
+    }
+
+    .JC-Branding {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .JC-BodyHR {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 450px) {
+    .JC-MobileBody a {
+        font-size: 20px;
+    }
+
+    .JC-MobileBody .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .JC-GameLeaderboard-leftInfo {
+        flex-direction: column;
+        padding-left: 25px;
+    } 
+
+    .JC-LeaderboardRank {
+        width: 0;
+    }
+}
